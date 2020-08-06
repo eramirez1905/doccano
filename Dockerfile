@@ -58,7 +58,10 @@ RUN pip install --no-cache-dir /deps/*.whl
 COPY --from=cleaner --chown=doccano:doccano /doccano /doccano
 
 VOLUME /data
-ENV DATABASE_URL="sqlite:////data/doccano.db"
+ENV ADMIN_USERNAME=admin
+ENV ADMIN_PASSWORD=password
+ENV ADMIN_EMAIL=cesar.reyes@pedidosya.com
+ENV DATABASE_URL="mysql://doccano:doccano@35.239.26.80:3306/doccano"
 
 ENV DEBUG="True"
 ENV SECRET_KEY="change-me-in-production"
