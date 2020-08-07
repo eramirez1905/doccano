@@ -58,10 +58,8 @@ RUN pip install --no-cache-dir /deps/*.whl
 COPY --from=cleaner --chown=doccano:doccano /doccano /doccano
 
 VOLUME /data
-ENV ADMIN_USERNAME="admin"
-ENV ADMIN_PASSWORD="password"
-ENV ADMIN_EMAIL="cesar.reyes@pedidosya.com"
-ENV DATABASE_URL="mssql://doccano:doccano@23.236.50.216/doccano"
+
+ENV DATABASE_URL="postgresql://doccano:doccano@34.71.171.141/doccano"
 
 ENV DEBUG="True"
 ENV SECRET_KEY="change-me-in-production"
