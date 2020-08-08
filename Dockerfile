@@ -58,7 +58,8 @@ RUN pip install --no-cache-dir /deps/*.whl
 COPY --from=cleaner --chown=doccano:doccano /doccano /doccano
 
 VOLUME /data
-ENV DATABASE_URL="sqlite:////data/doccano.db"
+#ENV DATABASE_URL="sqlite:////data/doccano.db"
+ENV DATABASE_URL="postgresql://doccano:doccano@34.71.171.141:5432/doccano"
 
 ENV DEBUG="True"
 ENV SECRET_KEY="change-me-in-production"
