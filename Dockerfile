@@ -64,7 +64,7 @@ ENV DATABASE_URL="postgresql://doccano:doccano@34.71.171.141:5432/doccano"
 ENV DEBUG="True"
 ENV SECRET_KEY="change-me-in-production"
 # ENV PORT="8000"
-ENV WORKERS="2"
+ENV WORKERS="1"
 ENV GOOGLE_TRACKING_ID=""
 ENV AZURE_APPINSIGHTS_IKEY=""
 
