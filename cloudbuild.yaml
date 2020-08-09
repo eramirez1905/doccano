@@ -3,5 +3,5 @@ steps:
   args: ['build', '--tag=gcr.io/${PROJECT_ID}/almeta-doccano:${BRANCH_NAME}', '.']
 - name: 'gcr.io/cloud-builders/docker'
   args: ["push", "gcr.io/${PROJECT_ID}/almeta-doccano:${BRANCH_NAME}"]
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'doccano', '--image', 'gcr.io/${PROJECT_ID}/almeta-doccano:${BRANCH_NAME}', '--region', 'us-central1', '--memory', '2G', '--platform', 'managed', '--allow-unauthenticated', '--port', '8080']
+#- name: 'gcr.io/cloud-builders/gcloud'
+#  args: ['beta', 'run', 'deploy', 'doccano', '--image', 'gcr.io/${PROJECT_ID}/almeta-doccano:${BRANCH_NAME}', '--region', 'us-central1', '--memory', '2G', '--platform', 'managed', '--allow-unauthenticated', '--port', '8080']
