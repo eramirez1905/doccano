@@ -12,5 +12,5 @@ if [[ -n "${ADMIN_USERNAME}" ]] && [[ -n "${ADMIN_EMAIL}" ]] && [[ -n "${ADMIN_P
   python app/manage.py create_admin --noinput --username="${ADMIN_USERNAME}" --email="${ADMIN_EMAIL}" --password="${ADMIN_PASSWORD}"
 fi
 
-gunicorn --bind=0.0.0.0:8080 --workers="${WORKERS:-1}" --pythonpath=app app.wsgi --preload=true--timeout 300
+gunicorn --bind=0.0.0.0:8000 --workers="${WORKERS:-1}" --pythonpath=app app.wsgi --preload=true--timeout 300
 # gunicorn --bind="0.0.0.0:${PORT:-8000}" --workers="${WORKERS:-1}" --pythonpath=app app.wsgi --timeout 300
