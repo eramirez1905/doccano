@@ -70,6 +70,6 @@ ENV AZURE_APPINSIGHTS_IKEY=""
 
 USER doccano
 WORKDIR /doccano
-EXPOSE 8080
+EXPOSE 8000
 
 CMD ["/doccano/tools/run.sh"]
